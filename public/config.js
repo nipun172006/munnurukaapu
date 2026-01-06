@@ -10,7 +10,7 @@ const API_CONFIG = {
     development: 'http://localhost:3000',
 
     // Production (update this after deploying backend to Render)
-    production: 'https://your-app-name.onrender.com'
+    production: 'https://community-registry-api.onrender.com'
 };
 
 // Automatically detect environment
