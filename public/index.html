@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Community Information Registry - Preserving community data for social and cultural initiatives">
+    <title>Community Information Registry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="animated-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                <span class="title-main">MunnuruKaapu Sangam Moosapet </span>
+                <span class="title-decoration"></span>
+            </h1>
+            <p class="hero-subtitle">Preserving community data for social and cultural initiatives</p>
+            <div class="hero-cta">
+                <a href="#form" class="btn btn-primary smooth-scroll">Register Now</a>
+                <a href="#about" class="btn btn-secondary smooth-scroll">Learn More</a>
+            </div>
+        </div>
+
+        <!-- Floating elements for visual interest -->
+        <div class="floating-elements">
+            <div class="float-element" style="--delay: 0s; --duration: 8s;">🌾</div>
+            <div class="float-element" style="--delay: 2s; --duration: 10s;">🌻</div>
+            <div class="float-element" style="--delay: 4s; --duration: 12s;">🌱</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About This Initiative</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">🤝</div>
+                    <h3>Voluntary Documentation</h3>
+                    <p>This is a completely voluntary initiative to document community information for better planning
+                        and support of social and cultural programs.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Privacy Respected</h3>
+                    <p>Your data is stored securely and used only for internal community planning. We respect your
+                        privacy and handle all information with care.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Community Unity</h3>
+                    <p>By participating, you help strengthen our community bonds and enable better coordination of
+                        initiatives that benefit everyone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="form" class="form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Community Registration</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Please fill in your details below. All fields marked with * are required.
+                </p>
+            </div>
+
+            <div class="form-container">
+                <form id="registrationForm" class="registration-form">
+                    <!-- Surname -->
+                    <div class="form-group">
+                        <label for="surname" class="form-label">Surname <span class="required">*</span></label>
+                        <input type="text" id="surname" name="surname" class="form-input" required>
+                    </div>
+
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="form-group">
+                        <label class="form-label">Gender <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Male" required>
+                                <span class="radio-custom"></span>
+                                <span>Male</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Female" required>
+                                <span class="radio-custom"></span>
+                                <span>Female</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="Other" required>
+                                <span class="radio-custom"></span>
+                                <span>Other</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Age -->
+                    <div class="form-group">
+                        <label for="age" class="form-label">Age <span class="required">*</span></label>
+                        <input type="number" id="age" name="age" class="form-input" min="0" max="150" required>
+                    </div>
+
+                    <!-- Mobile Number -->
+                    <div class="form-group">
+                        <label for="mobileNumber" class="form-label">Mobile Number <span
+                                class="required">*</span></label>
+                        <input type="tel" id="mobileNumber" name="mobileNumber" class="form-input" pattern="[0-9]{10}"
+                            maxlength="10" placeholder="10-digit mobile number" required>
+                        <small class="form-hint">Enter 10-digit mobile number</small>
+                    </div>
+
+                    <!-- Gmail ID -->
+                    <div class="form-group">
+                        <label for="gmailId" class="form-label">Gmail ID <span class="required">*</span></label>
+                        <input type="email" id="gmailId" name="gmailId" class="form-input"
+                            placeholder="example@gmail.com" required>
+                        <small class="form-hint">Enter your Gmail address</small>
+                    </div>
+
+                    <!-- Aadhar Card Number -->
+                    <div class="form-group">
+                        <label for="aadharNumber" class="form-label">Aadhar Card Number <span
+                                class="required">*</span></label>
+                        <input type="text" id="aadharNumber" name="aadharNumber" class="form-input" pattern="[0-9]{12}"
+                            maxlength="12" placeholder="12-digit Aadhar number" required>
+                        <small class="form-hint">Enter 12-digit Aadhar card number</small>
+                    </div>
+
+                    <!-- Village/City -->
+                    <div class="form-group">
+                        <label for="village" class="form-label">Address <span class="required">*</span></label>
+                        <input type="text" id="village" name="village" class="form-input" required>
+                    </div>
+
+                    <!-- Occupation -->
+                    <div class="form-group">
+                        <label for="occupation" class="form-label">Occupation <span class="required">*</span></label>
+                        <select id="occupation" name="occupation" class="form-input" required>
+                            <option value="">Select your occupation</option>
+                            <option value="Farming">Farming</option>
+                            <option value="Labor">Labor</option>
+                            <option value="Business">Business</option>
+                            <option value="Student">Student</option>
+                            <option value="Service">Service</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Optional Notes -->
+                    <div class="form-group">
+                        <label for="notes" class="form-label">Additional Notes (Optional)</label>
+                        <textarea id="notes" name="notes" class="form-input" rows="4"
+                            placeholder="Any additional information you'd like to share..."></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-submit" id="submitBtn">
+                            <span class="btn-text">Submit Registration</span>
+                            <span class="btn-loader" style="display: none;">
+                                <span class="spinner"></span>
+                                Submitting...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Registration Successful!</h3>
+                    <p>Thank you for your submission. Your information has been recorded.</p>
+                    <button class="btn btn-secondary" onclick="resetForm()">Register Another</button>
+                </div>
+
+                <!-- Error Message -->
+                <div id="errorMessage" class="error-message" style="display: none;">
+                    <div class="error-icon">⚠</div>
+                    <h3>Submission Failed</h3>
+                    <p id="errorText">Please try again later.</p>
+                    <button class="btn btn-secondary" onclick="hideError()">Close</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Section (Hidden by default) -->
+    <section id="admin" class="admin-section" style="display: none;">
+        <div class="container">
+            <div class="admin-panel">
+                <h2>Admin Dashboard</h2>
+
+                <!-- Login Form -->
+                <div id="adminLogin" class="admin-login">
+                    <h3>Admin Login</h3>
+                    <form id="adminLoginForm">
+                        <div class="form-group">
+                            <label for="adminUsername" class="form-label">Username</label>
+                            <input type="text" id="adminUsername" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adminPassword" class="form-label">Password</label>
+                            <div class="password-input-wrapper">
+                                <input type="password" id="adminPassword" class="form-input" required>
+                                <button type="button" class="toggle-password-btn" onclick="togglePasswordVisibility()"
+                                    aria-label="Toggle password visibility">
+                                    <span id="togglePasswordIcon">👁️</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+
+                <!-- Admin Controls (shown after login) -->
+                <div id="adminControls" style="display: none;">
+                    <div class="admin-stats">
+                        <h3>Statistics</h3>
+                        <div id="statsContainer">
+                            <p>Loading...</p>
+                        </div>
+                    </div>
+
+                    <div class="admin-actions">
+                        <button class="btn btn-primary" onclick="downloadCSV()">
+                            📥 Download Data (CSV)
+                        </button>
+                        <button class="btn btn-secondary" onclick="logout()">Logout</button>
+                    </div>
+
+                    <!-- Members Table Section -->
+                    <div class="members-section">
+                        <h3>Registered Members</h3>
+
+                        <!-- Search Box -->
+                        <div class="search-box">
+                            <input type="text" id="searchInput" class="form-input"
+                                placeholder="🔍 Search by surname, name, village, or mobile..."
+                                onkeyup="filterMembers()">
+                        </div>
+
+                        <!-- Members Table -->
+                        <div class="table-container">
+                            <table class="members-table" id="membersTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Surname</th>
+                                        <th>Name</th>
+                                        <th>Gender</th>
+                                        <th>Age</th>
+                                        <th>Mobile</th>
+                                        <th>Gmail</th>
+                                        <th>Aadhar</th>
+                                        <th>Village</th>
+                                        <th>Occupation</th>
+                                        <th>Notes</th>
+                                        <th>Submitted</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="membersTableBody">
+                                    <tr>
+                                        <td colspan="12" style="text-align: center; padding: 2rem;">
+                                            Loading members...
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div id="memberCount" class="member-count"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Community Information Registry. All rights reserved.</p>
+            <p class="footer-note">Built with care for community unity 🌾</p>
+        </div>
+    </footer>
+
+    <!-- Admin Access Button (Hidden, press Ctrl+Shift+A to reveal) -->
+    <button id="adminAccessBtn" class="admin-access-btn" onclick="toggleAdmin()" style="display: none;">
+        🔐 Admin
+    </button>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
