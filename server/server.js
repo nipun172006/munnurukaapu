@@ -258,7 +258,33 @@ app.get('/api/admin/stats', async (req, res) => {
     }
 });
 
-// Start server
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+/**
+ * Route: Health Check
+ * GET /health
+ * Used by Render and other platforms to verify the app is running
+ */
+app.get('/health', (req, res) => {
+    const healthStatus = {
+        status: 'ok',
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime(),
+        mongodb: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected'
+    };
+    res.status(200).json(healthStatus);
+});
+
+/**
+ * Route: Root endpoint
+ * GET /
+ * Serves the main HTML page
+ */
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
+});
+
+// Start server - bind to 0.0.0.0 for Render compatibility
+const HOST = process.env.HOST || '0.0.0.0';
+app.listen(PORT, HOST, () => {
+    console.log(`🚀 Server running on http://${HOST}:${PORT}`);
+    console.log(`📊 Health check available at http://${HOST}:${PORT}/health`);
 });
