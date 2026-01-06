@@ -3,9 +3,8 @@
  * Handles form submission, validation, and admin functionality
  */
 
-// API Base URL (configured in config.js)
-// Will automatically use localhost for development and Render URL for production
-const API_BASE_URL = window.API_BASE_URL || window.location.origin;
+// API Base URL is configured in config.js
+// Access it via window.API_BASE_URL (set by config.js)
 
 // Admin authentication token
 let adminToken = null;
@@ -105,7 +104,7 @@ async function handleFormSubmit(e) {
     }
 
     try {
-        const response = await fetch(`${API_BASE_URL}/api/submit`, {
+        const response = await fetch(`${window.API_BASE_URL}/api/submit`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -224,7 +223,7 @@ async function handleAdminLogin(e) {
     const password = form.querySelector('#adminPassword').value;
 
     try {
-        const response = await fetch(`${API_BASE_URL}/api/admin/login`, {
+        const response = await fetch(`${window.API_BASE_URL}/api/admin/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -261,7 +260,7 @@ function showAdminControls() {
  */
 async function loadStats() {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/admin/stats`, {
+        const response = await fetch(`${window.API_BASE_URL}/api/admin/stats`, {
             headers: {
                 'Authorization': `Bearer ${adminToken}`
             }
@@ -292,7 +291,7 @@ async function loadStats() {
  */
 async function downloadCSV() {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/admin/export`, {
+        const response = await fetch(`${window.API_BASE_URL}/api/admin/export`, {
             headers: {
                 'Authorization': `Bearer ${adminToken}`
             }
@@ -422,7 +421,7 @@ let allMembers = [];
  */
 async function loadMembers() {
     try {
-        const response = await fetch(`${API_BASE_URL}/api/admin/members`, {
+        const response = await fetch(`${window.API_BASE_URL}/api/admin/members`, {
             headers: {
                 'Authorization': `Bearer ${adminToken}`
             }
